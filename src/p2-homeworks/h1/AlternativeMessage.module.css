@@ -1,0 +1,61 @@
+.AltMessage {
+    font-family: sans-serif;
+    height: 80px;
+    font-size: 15px;
+    padding-bottom: 40px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row-reverse;
+}
+
+.AltAvatar {
+    border: 1px solid black;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    margin-right: 15px;
+}
+
+.AlterContent {
+    width: 250px;
+    height: 60px;
+    padding: 10px;
+    border-radius: 12px;
+    background: darkseagreen;
+    position: relative;
+    margin-right: 15px;
+}
+
+.AlterContent:after {
+    content: '';
+    width: 1.5em;
+    height: 1.5em;
+    position: absolute;
+    bottom: 0;
+}
+
+.right {
+    border-bottom-right-radius: 0;
+}
+
+.right::after {
+    right: 0;
+    transform: translateX(100%);
+    background: radial-gradient(circle at 100% 0, transparent, transparent 72%, darkseagreen 72%);
+}
+
+.AlterTime {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 12px;
+}
+
+.AlterText {
+    margin-bottom: 10px;
+}
+
+.AlterName {
+    font-weight: bold;
+    color: darkgreen;
+}
+

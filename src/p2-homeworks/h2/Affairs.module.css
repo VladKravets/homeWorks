@@ -1,0 +1,27 @@
+.affairs {
+    margin: 20px;
+    width: 500px;
+    background-color: #e1c4c4;
+    display: flex;
+    justify-content: space-between;
+}
+
+s.item {
+}
+
+s.priority {
+}
+
+button {
+    background-color: #77a477;
+    opacity: 0.5;
+    margin: 0 5px;
+}
+
+button:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+.deleteButton{
+    background-color: #e77a7a;
+}
