@@ -1,7 +1,6 @@
 .affairs {
     margin: 20px;
     width: 500px;
-    background-color: #e1c4c4;
     display: flex;
     justify-content: space-between;
 }

@@ -1,26 +1,39 @@
-import React from 'react'
+import React, {ChangeEvent, KeyboardEvent} from 'react'
 import s from './Greeting.module.css'
+import alternativeSuperButton from "../h4/common/c2-SuperButton/AlternativeSuperButton";
 
 type GreetingPropsType = {
-    name: any // need to fix any
-    setNameCallback: any // need to fix any
-    addUser: any // need to fix any
-    error: any // need to fix any
-    totalUsers: any // need to fix any
+    onKeyPressHandler: (e: KeyboardEvent<HTMLInputElement>) => void
+    name: string
+    setNameCallback: (e: ChangeEvent<HTMLInputElement>) => void
+    addUser: () => void
+    error: string
+    totalUsers: number
 }
 
 // презентационная компонента (для верстальщика)
 const Greeting: React.FC<GreetingPropsType> = (
-    {name, setNameCallback, addUser, error, totalUsers} // деструктуризация пропсов
+    {name, onKeyPressHandler, setNameCallback, addUser, error, totalUsers} // деструктуризация пропсов
 ) => {
-    const inputClass = s.error // need to fix with (?:)
+    const inputClass = s.error ? s.errorInput : s.input
 
     return (
-        <div>
-            <input value={name} onChange={setNameCallback} className={inputClass}/>
-            <span>{error}</span>
-            <button onClick={addUser}>add</button>
-            <span>{totalUsers}</span>
+        <div className={s.allProperty}>
+            <div className={s.inputForm}>
+                <input value={name}
+                       placeholder={'write here'}
+                       onChange={setNameCallback}
+                       className={inputClass}
+                       onKeyPress={onKeyPressHandler}
+                />
+                <button
+                    onClick={addUser}
+                    className={s.button}
+                    disabled={!name}>add
+                </button>
+                <span className={s.count}>{totalUsers}</span>
+                <div className={s.error}>{error}</div>
+            </div>
         </div>
     )
 }
