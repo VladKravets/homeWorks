@@ -11,13 +11,13 @@ s.item {
 s.priority {
 }
 
-button {
+.button {
     background-color: #77a477;
     opacity: 0.5;
     margin: 0 5px;
 }
 
-button:hover {
+.button:hover {
     opacity: 1;
     cursor: pointer;
 }
