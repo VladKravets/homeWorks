@@ -3,10 +3,15 @@
 }
 
 .errorInput {
-    border: 3px solid lime;
-    background: red;
+    width: 300px;
+    font-size: 20px;
+    padding: 6px 0 4px 10px;
+    border: 1px solid #fcfafa;
+    background: #f1f1f1;
+    border-radius: 8px;
 }
 
 .error {
-    color: red;
+    color: #c70606;
+    font-size: small;
 }
