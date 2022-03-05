@@ -1,0 +1,24 @@
+.navbar {
+    transform: translateX(-500px);
+    transition: 1000ms;
+}
+
+.navbar:hover {
+    transform: translateX(0px);
+    transition: 1000ms;
+}
+.icon{
+    font-size: 30px;
+}
+
+.item {
+    font-weight: bold;
+    color: #25b925;
+    font-family: sans-serif;
+    margin-right: 10px;
+    text-decoration: none;
+}
+.item:hover{
+    color: darkseagreen;
+    text-decoration-line: underline ;
+}
