@@ -1,24 +1,37 @@
 .navbar {
-    transform: translateX(-500px);
+    transform: translateX(-225px);
     transition: 1000ms;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .navbar:hover {
-    transform: translateX(0px);
+    transform: translateX(20px);
     transition: 1000ms;
 }
-.icon{
-    font-size: 30px;
+
+.text {
+    background-color: darkblue;
+    padding: 5px;
+    border-radius: 5px;
+    color: #a7a7ea;
+
 }
 
 .item {
     font-weight: bold;
-    color: #25b925;
+    color: #a7a7ea;
     font-family: sans-serif;
     margin-right: 10px;
     text-decoration: none;
 }
-.item:hover{
-    color: darkseagreen;
-    text-decoration-line: underline ;
+.active{
+    margin-right: 10px;
+    color: darkgoldenrod;
+}
+
+.item:hover {
+    color: darkblue;
+    text-decoration-line: underline;
 }

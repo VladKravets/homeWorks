@@ -10,7 +10,7 @@ function App() {
     return (
 
         <div className={s.App}>
-            <div>react homeworks:</div>
+            <div>React homeworks:</div>
             <HW5/>
         </div>
     )

@@ -7,12 +7,12 @@ function Header() {
     return (
 
         <div className={s.navbar}>
-            <div className={s.icon}>→</div>
             <div className={s.menu}>
-                <NavLink to={PATH.PRE_JUNIOR} className={s.item}>pre-Junior</NavLink>
-                <NavLink to={PATH.JUNIOR} className={s.item}>Junior</NavLink>
-                <NavLink to={PATH.JUN_PLUS} className={s.item}>Junior+</NavLink>
+                <NavLink to={PATH.PRE_JUNIOR}  className={({isActive}) => (isActive ? s.active : s.item)}>pre-Junior |</NavLink>
+                <NavLink to={PATH.JUNIOR} className={({isActive}) => (isActive ? s.active : s.item)}>Junior |</NavLink>
+                <NavLink to={PATH.JUN_PLUS} className={({isActive}) => (isActive ? s.active : s.item)}>Junior+</NavLink>
             </div>
+            <div className={s.text}>hover me :)</div>
         </div>
     )
 }
