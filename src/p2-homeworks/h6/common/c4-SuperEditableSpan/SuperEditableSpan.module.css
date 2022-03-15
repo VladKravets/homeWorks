@@ -1,0 +1,10 @@
+.span{
+    color: #13136c;
+    font-size: 20px;
+}
+.spanBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
