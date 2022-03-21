@@ -3,7 +3,7 @@ import React, {ChangeEvent, InputHTMLAttributes, DetailedHTMLProps} from 'react'
 type DefaultRadioPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
 
 type SuperRadioPropsType = DefaultRadioPropsType & {
-    options?: any[]
+    options?: string[]
     onChangeOption?: (option: any) => void
 }
 

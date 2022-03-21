@@ -10,7 +10,7 @@ import HW12 from "../../h12/HW12";
 const Junior = () => {
     return (
         <div>
-            {/*<HW7/>*/}
+            <HW7/>
             {/*<HW8/>*/}
             {/*<HW9/>*/}
             {/*<HW10/>*/}
