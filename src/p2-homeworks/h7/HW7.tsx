@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import SuperSelect from './common/c5-SuperSelect/SuperSelect'
 import SuperRadio from './common/c6-SuperRadio/SuperRadio'
-
+import s from './HW7.module.css'
 const arr = ['Minsk', 'Kiev', 'Tbilisi']
 
 function HW7() {
@@ -9,8 +9,8 @@ function HW7() {
 
     return (
         <div>
-            <hr/>
-            homeworks 7
+            <hr />
+            <div className={s.title}>Homework 7</div>
 
             {/*should work (должно работать)*/}
             <div>
