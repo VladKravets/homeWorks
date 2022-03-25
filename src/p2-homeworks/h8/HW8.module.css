@@ -1,0 +1,32 @@
+.container{
+    background-color: #d8e8e4;
+    width: 27.5%;
+}
+.title{
+    font-family: sans-serif;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bolder;
+    color: #808080;
+}
+.inform{
+    display: flex;
+    justify-content: space-between;
+    background-color: #d8e8e4;
+}
+.name{
+    color: #063f38;
+    font-weight: bold;
+    font-family: sans-serif;
+    margin-right: 10px;
+}
+.age{
+    color: #063f38;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+.buttons{
+    display: flex;
+    line-height: 1.7;
+}
+
