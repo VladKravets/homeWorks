@@ -26,13 +26,19 @@ function Clock() {
         setShow({...show, data: false})
     }
 
-    const stringTime = [date.getHours(), date.getMinutes(), date.getSeconds()].join(':') // fix with date
+
+    const stringTime:any = [date.getHours(), date.getMinutes(), date.getSeconds()] // fix with date
     const stringDate = date.toDateString() // fix with date
+
+    if(stringTime[0] < 10){stringTime[0] = "0"+ stringTime[0];}
+    if(stringTime[1] < 10){stringTime[1] = "0"+ stringTime[1];}
+    if(stringTime[2] < 10){stringTime[2] = "0"+ stringTime[2];}
+    const current_time = [stringTime[0],stringTime[1],stringTime[2]].join(':');
 
     return (
         <div className={s.clockContainer}>
             <span className={s.time} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
-                {show.time && stringTime}
+                {show.time && current_time}
             </span>
 
             {show && (
