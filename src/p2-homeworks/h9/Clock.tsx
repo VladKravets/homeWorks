@@ -1,51 +1,49 @@
 import React, {useState} from 'react'
 import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
+import s from './Clock.module.css'
 
 function Clock() {
     const [timerId, setTimerId] = useState<number>(0)
     const [date, setDate] = useState<Date>(new Date())
-    const [show, setShow] = useState<boolean>(false)
+    const [show, setShow] = useState({time: false, data: false})
 
     const stop = () => {
         clearTimeout(timerId)
     }
     const start = () => {
+        setShow({...show, time: true})
         stop()
         const id: number = window.setInterval(() => {
-            // setDate
+            setDate(new Date())
         }, 1000)
         setTimerId(id)
     }
 
     const onMouseEnter = () => {
-        let date = new Date();
-        let output = String(date.getDate()).padStart(2, '0') + '-' + String(date.getMonth() + 1).padStart(2, '0') + '-' + date.getFullYear();
-    alert(output)
+        setShow({...show, data: true})
     }
     const onMouseLeave = () => {
-        // close
+        setShow({...show, data: false})
     }
 
-    const stringTime = 'Time' // fix with date
-    const stringDate = 'Date' // fix with date
+    const stringTime = [date.getHours(), date.getMinutes(), date.getSeconds()].join(':') // fix with date
+    const stringDate = date.toDateString() // fix with date
 
     return (
-        <div>
-            <div
-                onMouseEnter={onMouseEnter}
-                onMouseLeave={onMouseLeave}
-            >
-                {stringTime}
-            </div>
+        <div className={s.clockContainer}>
+            <span className={s.time} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+                {show.time && stringTime}
+            </span>
 
             {show && (
-                <div>
+                <div className={s.data}>
                     {stringDate}
                 </div>
             )}
-
-            <SuperButton onClick={start}>start</SuperButton>
-            <SuperButton onClick={stop}>stop</SuperButton>
+            <div className={s.buttonsBlock}>
+                <SuperButton onClick={start}>start</SuperButton>
+                <SuperButton onClick={stop}>stop</SuperButton>
+            </div>
 
         </div>
     )
