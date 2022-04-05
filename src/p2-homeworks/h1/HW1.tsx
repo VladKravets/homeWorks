@@ -3,13 +3,13 @@ import Message from "./Message";
 import AlternativeMessage from "./AlternativeMessage";
 
 const messageData = {
-    avatar: 'https://www.shareicon.net/data/512x512/2016/07/26/802043_man_512x512.png',
+    avatar: 'https://pngimg.com/uploads/snoopy/snoopy_PNG49.png',
     name: 'Иван Иванов',
     message: 'yarn start нажимала?',
     time: '22:00',
 }
 const alternativeMessageData={
-    avatar: 'https://w7.pngwing.com/pngs/105/826/png-transparent-avatar-computer-icons-user-profile-social-avatar-heroes-author-black.png',
+    avatar: 'https://toppng.com/uploads/preview/snoopy-character-vector-free-download-11574040024zxjta6kkcz.png',
     name: 'Света Петровна',
     message: 'Да,но ничего не происходит =(',
     time: '22:04',
