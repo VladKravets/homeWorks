@@ -8,19 +8,19 @@ function HW7() {
     const [value, onChangeOption] = useState(arr[0])
 
     return (
-        <div>
+        <div className={s.container}>
             <hr />
             <div className={s.title}>Homework 7</div>
 
             {/*should work (должно работать)*/}
-            <div>
+            <div className={s.select}>
                 <SuperSelect
                     options={arr}
                     value={value}
                     onChangeOption={onChangeOption}
                 />
             </div>
-            <div>
+            <div className={s.radio}>
                 <SuperRadio
                     name={'radio'}
                     options={arr}
