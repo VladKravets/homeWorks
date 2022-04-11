@@ -21,8 +21,7 @@ export const loadingReducer = (state = initState, action: StartLoadingType): typ
             return state
     }
 }
-type loadingAC = ReturnType<typeof loadingAC>
-export const loadingAC = (value: boolean) => {
+export const loadingAC = (value: boolean):StartLoadingType => {
     return {
         type: "STARTED-LOADING",
         payload: { value },
