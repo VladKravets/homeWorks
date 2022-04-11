@@ -34,7 +34,7 @@ function HW8() {
     const check18 = () => setPeople(homeWorkReducer(initialPeople, {type: 'check', payload: 18}))
 
     return (
-        <div>
+        <div className={s.block}>
             <hr/>
             <div className={s.title}>Homework 8</div>
 

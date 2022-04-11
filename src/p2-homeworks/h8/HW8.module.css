@@ -1,32 +1,47 @@
-.container{
-    background-color: #d8e8e4;
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+.container {
+
+    margin: 0 auto;
     width: 27.5%;
 }
-.title{
+
+.title {
     font-family: sans-serif;
     font-size: 20px;
     text-align: center;
     font-weight: bolder;
     color: #808080;
 }
-.inform{
+
+.block {
+    display: flex;
+    flex-direction: column;
+}
+
+.inform {
+    font-family: 'Grape Nuts', cursive;
     display: flex;
     justify-content: space-between;
-    background-color: #d8e8e4;
+    font-size: 20px;
 }
-.name{
+
+.name {
     color: #063f38;
     font-weight: bold;
-    font-family: sans-serif;
     margin-right: 10px;
+    font-family: 'Oswald', sans-serif;
 }
-.age{
+
+.age {
     color: #063f38;
     font-weight: bold;
-    font-family: sans-serif;
+    font-family: 'Oswald', sans-serif;
 }
-.buttons{
+
+.buttons {
     display: flex;
     line-height: 1.7;
+    margin: 10px auto;
 }
 
