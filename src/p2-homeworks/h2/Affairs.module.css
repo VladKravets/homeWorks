@@ -1,10 +1,16 @@
 .affairs {
-    margin: 20px;
     width: 500px;
     display: flex;
     justify-content: space-between;
+    margin: 0 auto;
 }
-
+.blockButtons{
+    display: flex;
+    flex-direction: column;
+}
+.Buttons{
+    margin: 10px auto;
+}
 s.item {
 }
 
@@ -12,15 +18,18 @@ s.priority {
 }
 
 .button {
-    background-color: #77a477;
-    opacity: 0.5;
+    background-color: #6ba19e;
+    opacity: 0.7;
+    padding: 5px 10px;
     margin: 0 5px;
 }
 
 .button:hover {
+    background-color: #4f8c89;
     opacity: 1;
+    transition: all 0.2s linear;
     cursor: pointer;
 }
 .deleteButton{
-    background-color: #e77a7a;
+    background-color: #f1c5c5;
 }
