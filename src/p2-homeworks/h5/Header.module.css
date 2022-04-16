@@ -21,14 +21,14 @@
 
 .item {
     font-weight: bold;
-    color: #a7a7ea;
+    color: #111194;
     font-family: sans-serif;
     margin-right: 10px;
     text-decoration: none;
 }
 .active{
     margin-right: 10px;
-    color: darkgoldenrod;
+    color: #5d4c0e;
 }
 
 .item:hover {
