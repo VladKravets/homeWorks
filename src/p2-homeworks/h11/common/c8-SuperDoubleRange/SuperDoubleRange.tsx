@@ -1,14 +1,15 @@
 import React from 'react';
 import Slider from '@material-ui/core/Slider';
+import s from './DoubleRange.module.css'
 
 
 // тип пропсов обычного инпута
 
 
 type SuperDoubleRangePropsType = {
-    onChangeRange?: (value:number | number[]) => void
+    onChangeRange?: (value: number | number[]) => void
     value: [number, number]
-    onChangeRangeO?: (value:number) => void
+    onChangeRangeO?: (value: number) => void
     // min, max, step, disable, ...
 }
 
@@ -26,17 +27,19 @@ const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
         onChangeRange && onChangeRange(value as number)
     };
     return (
-        <Slider
-            style={{
-                color:'#f57c00',
-                width:800
-            }}
-            value={value}
-            onChange={handleChange}
-            valueLabelDisplay="auto"
-            aria-labelledby="range-slider"
-            getAriaValueText={valuetext}
-        />
+        <div className={s.doubleRange}>
+            <Slider
+                style={{
+                    color: '#f50000',
+                    width: 400
+                }}
+                value={value}
+                onChange={handleChange}
+                valueLabelDisplay="auto"
+                aria-labelledby="range-slider"
+                getAriaValueText={valuetext}
+            />
+        </div>
     );
 }
 
