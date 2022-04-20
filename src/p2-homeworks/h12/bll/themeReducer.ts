@@ -3,7 +3,7 @@ const SET_THEME = 'SET_THEME';
 type initStateType = typeof initState
 
 const initState = {
-    color: 'green'
+    color: 'light'
 };
 
 

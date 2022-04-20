@@ -1,23 +1,77 @@
-.dark {
-    background: dimgrey;
+.title {
+    font-family: sans-serif;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bolder;
+    color: #808080;
+}
+.light {
+    background: linear-gradient(90deg, #f598a8, #f6edb2);
 }
 
 .dark-text {
     color: aliceblue;
 }
 
-.red {
-    background: lightcoral;
+.dark-gradient {
+    background: #466368;
+    background: linear-gradient(#648880, #293f50);
+    border-radius: 6px;
+    height: 120px;
 }
 
 .red-text {
     color: aqua;
 }
 
-.some {
+.green {
     background: lightgreen;
 }
 
 .some-text {
     color: darkslateblue;
+}
+
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 50vh;
+    min-width: 360px;
+    width: 100%;
+}
+
+.wrapper {
+    animation: scroll 70s linear infinite;
+    background: url("https://images.unsplash.com/photo-1465146633011-14f8e0781093?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3450&q=80"), #111111;
+    color: #eee;
+    height: 50vh;
+    min-width: 360px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+    perspective-origin: 50% 50%;
+
+}
+
+@keyframes scroll {
+    100%{
+        background-position:0px -3000px;
+    }
+}
+
+@media (prefers-reduced-motion) {
+    .wrapper {
+        animation: scroll 200s linear infinite;
+    }
+}
+
+@media (min-width: 670px) {
+    .title {
+        font-size: 5rem;
+    }
 }

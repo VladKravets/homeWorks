@@ -5,7 +5,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {AppStoreType} from "../h10/bll/store";
 import {setThemeAC} from "./bll/themeReducer";
 
-const themes = ['dark', 'red', 'some'];
+const themes = ['light', 'dark-gradient', 'gray-animated'];
 
 function HW12() {
     const theme = useSelector<AppStoreType, string>(state => state.theme.color)
@@ -13,9 +13,9 @@ function HW12() {
     const onChangeCallback = (theme: string) => dispatch(setThemeAC(theme))
 
     return (
-        <div className={s.box}>
-            <div className={`${s[theme]} ${s.wrapper}`}>
-                <p className='hw'>Homeworks 12</p>
+        <div className={s.wrapper}>
+            <div className={`${s[theme]} ${s.box}`}>
+                <div className={s.title}>Homeworks 12</div>
                 <span className={`s[theme + '-text']`}></span>
 
 
