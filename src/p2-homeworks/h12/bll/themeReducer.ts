@@ -1,33 +1,25 @@
-export type ThemeInitState = {
-    themes: string
-}
+const SET_THEME = 'SET_THEME';
 
-export type ThemeActionTotalType = SetDarkThemeActionType | SetRedThemeActionType | SetSomeThemeActionType
-
-type SetDarkThemeActionType = {
-    type:'SET-DARK-THEME'
-}
-
-type SetRedThemeActionType = {
-    type:'SET-RED-THEME'
-}
-
-type SetSomeThemeActionType = {
-    type:'SET-SOME-THEME'
-}
+type initStateType = typeof initState
 
 const initState = {
-    themes: 'some'
+    color: 'green'
 };
 
-export const themeReducer = (state:ThemeInitState = initState, action: ThemeActionTotalType): ThemeInitState => {
+
+export const themeReducer = (state: initStateType = initState, action: ActionType): initStateType => {
     switch (action.type) {
-        case "SET-DARK-THEME":
-            return {themes: 'dark'}
-        case "SET-RED-THEME":
-            return {themes: 'red'}
-        case "SET-SOME-THEME":
-            return {themes: 'some'}
-        default: return state;
+        case 'SET_THEME': {
+            return {
+                ...state,
+                color: action.color
+            }
+        }
+        default:
+            return state;
     }
 };
+
+export const setThemeAC = (color: string) => ({type: SET_THEME, color} as const)
+type setThemeACType = ReturnType<typeof setThemeAC>
+type ActionType = setThemeACType
