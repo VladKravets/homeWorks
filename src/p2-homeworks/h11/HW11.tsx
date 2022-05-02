@@ -5,6 +5,7 @@ import s from './HW11.module.css'
 function HW11() {
     const [value1, setValue1] = useState(19)
     const [value2, setValue2] = useState(78)
+
     const onChangeRange = (value: number | number[]) => {
         if (Array.isArray(value)) {
             setValue1(value[0])
