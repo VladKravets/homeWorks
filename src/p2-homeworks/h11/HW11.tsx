@@ -15,7 +15,9 @@ function HW11() {
     return (
         <div>
             <hr/>
-            <div className={s.title}>Homework 11</div>
+            <div className={s.title}>
+                Homework 11
+            </div>
 
             {/*should work (должно работать)*/}
             <div className={s.range}>

@@ -23,7 +23,8 @@ const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
     }
 ) => {
     // сделать самому, можно подключать библиотеки
-    const handleChange = (event: React.ChangeEvent<{}>, value: (number | number[])) => {
+    const handleChange = (event: React.ChangeEvent<{}>,
+                          value: (number | number[])) => {
         onChangeRange
         && onChangeRange(value as number)
     };
