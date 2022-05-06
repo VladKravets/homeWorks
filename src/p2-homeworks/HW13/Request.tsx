@@ -1,7 +1,7 @@
 import React, {ChangeEvent, useState} from 'react';
 import {requestAPI} from './RequestsAPI';
 import {Button, Checkbox, FormControlLabel} from '@material-ui/core';
-import {Fastfood, FastfoodTwoTone, Favorite, FavoriteBorder} from '@material-ui/icons';
+import {Fastfood, FastfoodTwoTone} from '@material-ui/icons';
 import s from './Request.module.css'
 
 const Request: React.FC = () => {
@@ -12,9 +12,11 @@ const Request: React.FC = () => {
     }
     const onchangeCallbackButton = () => {
         console.log(success)
-        requestAPI.postRequest(success).then(d => setMessage(d.errorText)).catch((error) => {
-            setMessage(error.response.data.errorText)
-        })
+        requestAPI.postRequest(success)
+            .then(d => setMessage(d.errorText))
+            .catch((error) => {
+                setMessage(error.response.data.errorText)
+            })
     }
     return <div className={s.container}>
         Result of response: {message}
